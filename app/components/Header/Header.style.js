@@ -10,6 +10,10 @@ export const StyledLink = styled(Link)`
   display: inline-flex;
 `;
 
+export const StyledListLink = styled(Link)`
+  color: ${(props) => props.theme.secondary.greyBlue};
+`;
+
 export const Nav = styled.div`
   display: flex;
   align-items: center;
@@ -19,8 +23,18 @@ export const Nav = styled.div`
 export const List = styled.ul`
   display: flex;
   list-style: none;
+  gap: 1rem;
 `;
 
 export const ListItem = styled.li`
   margin-right: 10px;
 `;
+
+export const Button = styled.a`
+  border-radius: 50px;
+  background: ${(props) => props.theme.primary.limeBlue};
+  padding: 1rem 2rem;
+  color: ${(props) => props.theme.secondary.white};
+`;
+
+export const ButtonText = styled.span``;
