@@ -28,7 +28,7 @@ const Header = () => {
         <ThemeProvider theme={Colors}>
           <Nav>
             <StyledLink href="/" className="logo">
-              <Image src="/logo.svg" width={139} height={20} />
+              <Image src="/logo.svg" width={139} height={20} alt="logo" />
             </StyledLink>
             <List>
               <ListItem>
@@ -47,7 +47,9 @@ const Header = () => {
                 <StyledListLink href="/careers">Careers</StyledListLink>
               </ListItem>
             </List>
-            <StyledButtonLink href="/">Request an invite</StyledButtonLink>
+            <StyledButtonLink displayonmaxwidth={"true"} href="/">
+              Request an invite
+            </StyledButtonLink>
             <HamburgerContainer onClick={handleClick} tabIndex={0}>
               <Image
                 src={isOpen ? "/close.svg" : "/hamburger.svg"}

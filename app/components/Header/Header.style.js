@@ -1,14 +1,18 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Link from "next/link";
 
 export const Container = styled.nav`
   position: fixed;
   width: 100%;
-  margin: 1rem 0;
+  background: white;
+  top: 0;
+  left: 0;
+  z-index: 999;
 `;
 
 export const StyledLink = styled(Link)`
   display: inline-flex;
+  padding: 0.5rem 0;
 `;
 
 export const StyledListLink = styled(Link)`
@@ -19,7 +23,7 @@ export const Nav = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 4rem;
+  margin: 1rem 3rem;
 `;
 
 export const List = styled.ul`
@@ -43,6 +47,7 @@ export const ListItem = styled.li`
 `;
 
 export const StyledButtonLink = styled(Link)`
+  display: inline-block;
   border-radius: 50px;
   background: linear-gradient(
     90deg,
@@ -51,9 +56,13 @@ export const StyledButtonLink = styled(Link)`
   );
   padding: 1rem 2rem;
   color: ${(props) => props.theme.secondary.white};
-  @media only screen and (max-width: 1008px) {
-    display: none;
-  }
+  ${(props) =>
+    props.displayonmaxwidth &&
+    css`
+      @media only screen and (max-width: 1008px) {
+        display: none;
+      }
+    `}
 `;
 
 export const ButtonText = styled.span``;
