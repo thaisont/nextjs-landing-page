@@ -7,9 +7,10 @@ export const Container = styled.section`
 
 export const SubContainer = styled.div`
   width: 50%;
+  margin-bottom: 2rem;
 `;
 
-export const Heading = styled.h1`
+export const Heading = styled.h2`
   color: ${(props) => props.theme.primary.darkBlue};
   font-weight: 400;
   font-size: clamp(1.5rem, 2.703vw + -0.203rem, 2.5rem);
@@ -32,6 +33,7 @@ export const ListParent = styled.ul`
 
 export const ListItems = styled.li`
   text-decoration: none;
+  background: ${(props) => (props.$primary ? "hsl(0, 0%, 100%)" : "")};
 `;
 
 export const ListHeading = styled.h3`
@@ -41,4 +43,5 @@ export const ListHeading = styled.h3`
 
 export const ListText = styled.p`
   color: ${(props) => props.theme.secondary.greyBlue};
+  font-size: ${(props) => (props.$primary ? "14px" : "")};
 `;
