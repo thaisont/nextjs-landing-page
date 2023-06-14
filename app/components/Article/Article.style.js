@@ -14,6 +14,14 @@ export const ArticleHeading = styled.h2`
   padding-bottom: 2rem;
 `;
 
+export const ListContainer = styled.div``;
+
+export const ListParent = styled.ul`
+  list-style: none;
+  display: flex;
+  column-gap: 2rem;
+`;
+
 export const ListAuthor = styled.p`
   color: ${(props) => props.theme.secondary.greyBlue};
   font-size: 14px;
