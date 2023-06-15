@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import Link from "next/link";
 
-export const Container = styled.nav`
+export const Container = styled.header`
   position: fixed;
   width: 100%;
   background: white;
@@ -19,7 +19,7 @@ export const StyledListLink = styled(Link)`
   color: ${(props) => props.theme.secondary.greyBlue};
 `;
 
-export const Nav = styled.div`
+export const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;

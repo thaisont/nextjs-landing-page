@@ -20,6 +20,7 @@ export const ListParent = styled.ul`
   list-style: none;
   display: flex;
   column-gap: 2rem;
+  padding: 0;
 `;
 
 export const ListAuthor = styled.p`

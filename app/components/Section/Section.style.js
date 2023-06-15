@@ -34,6 +34,7 @@ export const ListParent = styled.ul`
 export const ListItems = styled.li`
   text-decoration: none;
   background: ${(props) => (props.$primary ? "hsl(0, 0%, 100%)" : "")};
+  border-radius: ${(props) => (props.$primary ? "0 0 10px 10px" : "")};
   /* white-space: nowrap; */
   overflow: hidden;
   /* text-overflow: ellipsis; */
