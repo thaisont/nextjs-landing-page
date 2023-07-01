@@ -1,7 +1,6 @@
 "use client";
-import { createClient } from "next-sanity";
-import { useEffect, useState } from "react";
 import Image from "next/image";
+
 import {
   BannerContainer,
   BannerSubContainer,
@@ -14,31 +13,18 @@ import {
 import { StyledButtonLink } from "../Header/Header.style";
 import { ThemeProvider } from "styled-components";
 import { Colors } from "@/app/Themes/Colors";
+import { getProjects } from "@/sanity/schemas/sanity-utils";
 
-// Initialize the Sanity client
-const client = createClient({
-  projectId: "1nvfv4i8",
-  dataset: "production",
-  apiVersion: "2023-06-20",
-  useCdn: false,
-});
-
-export default function Banner() {
-  useEffect(() => {
-    async function fetchBanners() {
-      const bannerInfo = await client.fetch(`*[_type == "banner"]`);
-      console.log(bannerInfo);
-    }
-    fetchBanners();
-  }, []);
+export default async function Banner() {
+  const projects = await getProjects();
 
   return (
     <BannerContainer>
       <ThemeProvider theme={Colors}>
         <BannerSubContainer>
           <BannerHeading>
-            <BannerTitle></BannerTitle>
-            <BannerText></BannerText>
+            <BannerTitle>{projects[0].title}</BannerTitle>
+            <BannerText>{projects[1].subtitle}</BannerText>
             <StyledButtonLink href="/">Request an invite</StyledButtonLink>
           </BannerHeading>
           <ImageContainer>

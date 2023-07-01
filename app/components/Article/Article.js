@@ -14,7 +14,6 @@ import {
 import { ThemeProvider } from "styled-components";
 import { Colors } from "@/app/Themes/Colors";
 import { ListItems, ListText } from "../Section/Section.style";
-import Image from "next/image";
 
 const Article = () => {
   return (
