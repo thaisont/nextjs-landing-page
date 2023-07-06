@@ -2,6 +2,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import StyledComponentsRegistry from "./lib/registry";
 import { Public_Sans } from "next/font/google";
+import Header from "./components/Header/Header";
 
 const publicSans = Public_Sans({
   weight: ["400", "700"],

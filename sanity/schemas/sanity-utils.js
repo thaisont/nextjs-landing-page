@@ -8,5 +8,8 @@ export async function getProjects() {
     useCdn: false,
   });
 
-  return client.fetch(groq`*[_type == "banner"]{ title, subtitle }`);
+  return client.fetch(groq`*[_type == "banner"]{
+    title,
+    subtitle
+  }`);
 }

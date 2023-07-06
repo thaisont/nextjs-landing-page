@@ -1,6 +1,4 @@
 "use client";
-import { useEffect, useState } from "react";
-import { createClient } from "next-sanity";
 import {
   Container,
   SubContainer,
@@ -15,34 +13,17 @@ import {
 import Image from "next/image";
 import { ThemeProvider } from "styled-components";
 import { Colors } from "@/app/Themes/Colors";
+import { getProjects } from "@/sanity/schemas/sanity-utils";
 
-export default function Section() {
-  const [sections, setSections] = useState([]);
-
-  const client = createClient({
-    projectId: "1nvfv4i8",
-    dataset: "production",
-    apiVersion: "2023-06-09",
-    useCdn: false,
-  });
-
-  useEffect(() => {
-    async function fetchSections() {
-      const sectionInfo = await client.fetch(`*[_type == "banner"]`);
-      setSections(sectionInfo);
-    }
-    fetchSections();
-  }, []);
-
-  const secondTitle = sections.length > 1 ? sections[0].title : "";
-  const secondSub = sections.length > 1 ? sections[0].subtitle : "";
-
+export default async function Section() {
+  const projects = await getProjects();
+  // console.log(projects);
   return (
     <ThemeProvider theme={Colors}>
       <Container>
         <SubContainer>
-          <Heading></Heading>
-          <SectionText></SectionText>
+          <Heading>{projects[0].title}</Heading>
+          <SectionText>{projects[0].subtitle}</SectionText>
         </SubContainer>
         <ListContainer>
           <ListParent>
