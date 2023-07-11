@@ -7,12 +7,10 @@ import { getProjects } from "@/sanity/schemas/sanity-utils";
 import Link from "next/link";
 
 export default async function Home() {
-  const projects = await getProjects();
-  console.log(projects);
   return (
     <>
       <Header />
-      {/* <Banner /> */}
+      <Banner />
     </>
   );
 }

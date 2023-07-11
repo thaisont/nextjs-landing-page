@@ -1,16 +1,7 @@
-"use client";
 import React from "react";
-import Image from "next/image";
-import { ThemeProvider } from "styled-components";
-import { Colors } from "@/app/Themes/Colors";
+import Hamburger from "./Hamburger";
 
 export default function Header() {
-  // const [isOpen, setIsOpen] = useState(false);
-
-  // const handleClick = () => {
-  //   setIsOpen(!isOpen);
-  // };
-
   return (
     <>
       <header className="fixed w-full bg-white z-10 top-0 left-0">
@@ -50,7 +41,7 @@ export default function Header() {
             </svg>
           </a>
           <ul className="flex list-none gap-4 ">
-            <li className="mr-4">
+            <li className="mr-4 w-100">
               <a href="/">Home</a>
             </li>
             <li className="mr-4">
@@ -68,49 +59,13 @@ export default function Header() {
           </ul>
           <a
             href=""
-            className="max-md:hidden white inline-block rounded-full py-4 px-8 bg-gradient-to-r from-green-400 to-sky-400 text-white"
+            className="max-lg:hidden white inline-block rounded-full py-4 px-8 bg-gradient-to-r from-green-400 to-sky-400 text-white"
           >
             Request Invite
           </a>
+          <Hamburger />
         </nav>
       </header>
-      {/* <Container>
-        <ThemeProvider theme={Colors}>
-          <Nav>
-            <StyledLink href="/" className="logo">
-              <Image src="/logo.svg" width={139} height={20} alt="logo" />
-            </StyledLink>
-            <List>
-              <ListItem>
-                <StyledListLink href="/">Home</StyledListLink>
-              </ListItem>
-              <ListItem>
-                <StyledListLink href="/about">About</StyledListLink>
-              </ListItem>
-              <ListItem>
-                <StyledListLink href="/contact">Contact</StyledListLink>
-              </ListItem>
-              <ListItem>
-                <StyledListLink href="/blog">Blog</StyledListLink>
-              </ListItem>
-              <ListItem>
-                <StyledListLink href="/careers">Careers</StyledListLink>
-              </ListItem>
-            </List>
-            <StyledButtonLink displayonmaxwidth={"true"} href="/">
-              Request an invite
-            </StyledButtonLink> */}
-      {/* <HamburgerContainer onClick={handleClick} tabIndex={0}> */}
-      {/* <Image
-              src={isOpen ? "/close.svg" : "/hamburger.svg"}
-              alt={isOpen ? "Close" : "Hamburger"}
-              width={isOpen ? 18 : 24}
-              height={isOpen ? 19 : 11}
-            /> */}
-      {/* </HamburgerContainer> */}
-      {/* </Nav>
-        </ThemeProvider>
-      </Container> */}
     </>
   );
 }
