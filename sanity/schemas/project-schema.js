@@ -13,6 +13,19 @@ const project = {
       type: "text",
       title: "Subtitle",
     },
+    {
+      name: "image",
+      type: "image",
+      title: "Image",
+      options: { hotspot: true },
+      fields: [
+        {
+          name: "alt",
+          title: "Alt",
+          type: "string",
+        },
+      ],
+    },
   ],
 };
 

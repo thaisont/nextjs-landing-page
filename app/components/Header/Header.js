@@ -4,7 +4,7 @@ import Hamburger from "./Hamburger";
 export default function Header() {
   return (
     <>
-      <header className="fixed w-full bg-white z-10 top-0 left-0">
+      <header className="fixed w-full bg-white z-50 top-0 left-0">
         <nav className="flex items-center justify-between my-4 mx-12">
           <a className="py-2 px-0 inline-flex" href="/">
             <svg xmlns="http://www.w3.org/2000/svg" width="139" height="20">
@@ -40,7 +40,7 @@ export default function Header() {
               </g>
             </svg>
           </a>
-          <ul className="flex list-none gap-4 ">
+          <ul className="flex list-none gap-4 text-secondary-grey-blue">
             <li className="mr-4 w-100">
               <a href="/">Home</a>
             </li>
