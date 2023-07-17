@@ -18,14 +18,14 @@ export default async function Banner() {
           </div>
           <div className="col-span-6  ">
             <Image
-              className="absolute bottom-[-23rem]"
+              className="absolute bottom-[-55%] right-[-39%] w-screen h-screen"
               src={urlFor(projects[3].image).url()}
               width={1271}
-              height={900}
+              height={1304}
               alt={projects[3].image.alt}
             />
             <img
-              className="absolute z-10 right-[-16rem] top-[-9rem]"
+              className="absolute z-10 right-[-16rem] top-[-62%]"
               src={urlFor(projects[2].image).url()}
               alt={projects[2].image.alt}
             />
