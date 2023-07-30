@@ -11,6 +11,8 @@ export default async function Home() {
     <>
       <Header />
       <Banner />
+      <Section />
+      <Article />
     </>
   );
 }

@@ -1,6 +1,6 @@
 import project from "./project-schema";
 import list from "./list-schema";
 
-const schemas = [project];
+const schemas = [project, list];
 
 export default schemas;

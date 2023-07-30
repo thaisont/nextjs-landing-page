@@ -16,6 +16,28 @@ export async function getProjects() {
   }`);
 }
 
+export async function getList() {
+  return client.fetch(groq`*[_type == "list" && type == "first-section"]{
+    type,
+    image,
+    title, 
+    subtitle,
+    order,
+  } | order( order asc)
+  `);
+}
+
+export async function getArticles() {
+  return client.fetch(groq`*[_type == "list" && type == "articles"]{
+    type,
+    image,
+    title, 
+    subtitle,
+    order,
+  } | order( order asc)
+  `);
+}
+
 const builder = imageUrlBuilder(client);
 
 export function urlFor(source) {

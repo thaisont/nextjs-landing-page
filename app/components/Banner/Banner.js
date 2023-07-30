@@ -7,25 +7,27 @@ export default async function Banner() {
   console.log(projects[2].image);
 
   return (
-    <section className="mt-20 overflow-x-clip relative ">
+    <section className="mt-20 overflow-x-clip relative mb-32">
       <div className="mx-12 relative">
         <div className="flex mt-20 grid grid-cols-12 ">
           <div className="col-span-4 mt-20">
             <h2 className="heading2 font-light text-clamp text-primary-dark-blue">
               {projects[1].title}
             </h2>
-            <p className="my-8">{projects[1].subtitle}</p>
+            <p className="my-8 text-secondary-grey-blue">
+              {projects[1].subtitle}
+            </p>
           </div>
           <div className="col-span-6  ">
             <Image
-              className="absolute bottom-[-55%] right-[-39%] w-screen h-screen"
+              className="absolute bottom-[-45%] right-[-40%] w-screen h-screen"
               src={urlFor(projects[3].image).url()}
               width={1271}
               height={1304}
               alt={projects[3].image.alt}
             />
             <img
-              className="absolute z-10 right-[-16rem] top-[-62%]"
+              className="absolute z-10 right-[-16rem] top-[-27%]"
               src={urlFor(projects[2].image).url()}
               alt={projects[2].image.alt}
             />
