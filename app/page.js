@@ -13,6 +13,7 @@ export default async function Home() {
       <Banner />
       <Section />
       <Article />
+      <Footer />
     </>
   );
 }

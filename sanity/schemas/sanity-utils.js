@@ -31,6 +31,7 @@ export async function getArticles() {
   return client.fetch(groq`*[_type == "list" && type == "articles"]{
     type,
     image,
+    author,
     title, 
     subtitle,
     order,
